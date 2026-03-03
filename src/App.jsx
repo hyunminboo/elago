@@ -1,34 +1,55 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState, useEffect } from 'react'
+import './styles/main.scss'
+import Header from './components/Header'
+import Hero from './sections/Hero'
+import Footer from './components/Footer'
+import Follow from './sections/Follow'
+import Collection from './sections/Collection'
+import Product from './sections/Product'
+import Instargram from './sections/Instargram'
+import TopBanner from './components/TopBanner'
+import FixedTopBtn from './components/FixedTopBtn'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [topBanner, setTopBanner] = useState('')
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(()=>{
+    AOS.init({
+      duration:400,
+      easing:'ease'
+    });
+  },[])
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY
+      setIsScrolled(scrollTop > 200)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const upTopBanner = () => {
+    setTopBanner('up')
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className={`app-container ${topBanner} ${isScrolled ? 'scrolled' : ''}`}>
+      <FixedTopBtn />
+      <TopBanner onClick={upTopBanner} />
+      <Header />
+      <main>
+        <section id="hero" className='section'><Hero /></section>
+        <section id="follow" className='section'><Follow /></section>
+        <section id="collection" className='section'><Collection /></section>
+        <section id="product" className='section'><Product /></section>
+        <section id="instargram" className='section'><Instargram /></section>
+      </main>
+      <Footer />
+    </div>
   )
 }
 
