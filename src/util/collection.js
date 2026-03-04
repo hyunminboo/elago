@@ -23,6 +23,14 @@ export const collectionData = [
       kname: '맥세이프지갑 & 케이스',
       image: img('product_3.png')
     },
+
+    {
+      id: 4,
+      title: '다양한 핸드폰 악세서리',
+      name: 'Accessories',
+      kname: '맥세이프지갑 & 케이스',
+      image: img('product_4.jpg')
+    },
     
   ]
   
