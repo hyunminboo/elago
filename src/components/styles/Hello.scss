@@ -9,6 +9,11 @@
     .t-wrap {
         text-align: center;
         width: 63rem;
+
+        p.txt-2{
+            color:var(--primary);
+        }
+
         h2.tit {
             color:var(--primary);
             margin: 3rem 0 2rem;

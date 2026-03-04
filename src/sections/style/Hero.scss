@@ -1,129 +1,104 @@
 .hero-container {
-    height: 90rem;
+  height: 90rem;
+  position: relative;
 
-    h2.tit {
-        font-size: 7.3rem;
+  .swiper {
+    height: 100%;
+  }
+
+  .hero-slide {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .inner {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      max-width: 164rem;
+
+      .t-wrap {
+        margin-left: 5rem;
+
+        h2.tit {
+          font-size: 7.3rem;
+        }
+
+        p {
+          font-size: 2.1rem;
+          margin-top: 4rem;
+        }
+      }
     }
 
-    .swiper {
-        height: 100%;
-
+    @mixin theme($color, $btn-hover: null) {
+      h2.tit, p {
+        color: $color;
+      }
+      a.btn {
+        background: $color;
+        &:hover {
+          color: $btn-hover;
+        }
+      }
     }
 
-    .hero-slide {
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-
-        .inner {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            max-width: 164rem;
-
-            p.txt {
-                font-size: 2.1rem;
-                margin-top: 4rem;
-            }
-        }
-
-        &.hs-1 {
-            h2.tit {
-                color: var(--primary);
-            }
-
-            p.txt {
-                color: var(--primary);
-            }
-
-            a.btn {
-                background: var(--primary);
-            }
-        }
-
-        &.hs-2 {
-            h2.tit {
-                color: var(--bg3);
-            }
-
-            p.txt {
-                color: var(--bg3);
-            }
-
-            a.btn {
-                background: var(--bg3);
-
-                &:hover {
-                    color: var(--bg2)
-                }
-            }
-        }
-
-        &.hs-3 {
-            .inner {
-                
-                justify-content: flex-start;
-
-                h2.tit {
-                    color: var(--primary);
-                }
-
-                p.txt {
-                    color: var(--primary);
-                }
-
-                a.btn {
-                    background: var(--primary);
-
-                    &:hover {
-                        color: var(--main-slider03-tit);
-                    }
-                }
-            }
-        }
+    &.hs-1 {
+      @include theme(var(--primary));
     }
 
-    .hero-nav{
+    &.hs-2 {
+      @include theme(var(--bg3), var(--bg2));
+    }
+
+    &.hs-3 {
+      @include theme(var(--primary), var(--main-slider03-tit));
+    }
+  }
+
+  .hero-nav {
+    position: absolute;
+    z-index: 3;
+    left: 7.5vw;
+    bottom: 8.7rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    .swiper-pagination-fraction {
+      width: 5rem;
+      height: 5rem;
+      position: relative;
+      font-size: 0;
+      color: var(--bg);
+
+      .swiper-pagination-current,
+      .swiper-pagination-total {
+        font-size: 2.2rem;
         position: absolute;
-        z-index: 3;
-        left: 7.5vw;
-        bottom: 8.7rem;
-        display: flex;
-        align-items: center;
-        gap:2rem;
-        
-        .swiper-pagination-fraction{
-            width: 5rem;
-            height: 5rem;
-            position: relative;
-            font-size: 0;
-            color: var(--bg);
-            .swiper-pagination-current{
-                font-size: 2.2rem;
-                position: absolute;
-                left: 0;
-                top: 0;
-            }
-            .swiper-pagination-total{
-                font-size: 2.2rem;
-                position: absolute;
-                right: 0;
-                bottom: 0;
-            }
+      }
 
-            &::after{
-                content:"";
-                display: block;
-                position: absolute;
-                width: 1px;
-                height: 50px;
-                background-color: var(--bg);
-                left: 10%;
-                top: 40%;
-                transform: rotate(45deg) translate(-50%,-50%);
-            }
-        }
+      .swiper-pagination-current {
+        left: 0;
+        top: 0;
+      }
 
+      .swiper-pagination-total {
+        right: 0;
+        bottom: 0;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 1px;
+        height: 50px;
+        background-color: var(--bg);
+        left: 10%;
+        top: 40%;
+        transform: rotate(45deg) translate(-50%, -50%);
+      }
     }
-
+  }
 }

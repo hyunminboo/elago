@@ -8,9 +8,7 @@ const Header = () => {
   return (
     <header>
       <div className="inner">
-
-
-
+        
         <Nav />
         <h1 className='tit'>
           <a href={headerLogo.href}>

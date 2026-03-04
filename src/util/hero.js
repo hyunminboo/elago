@@ -4,7 +4,7 @@ export const heroSlides = [
   {
     id: "hs-1",
     title: "BETTER DESK, <br>BETTER DAY",
-    subtitle: "걱정 없이 자유로운 외출! <br>다양한 상품들을 할인가로 만나보세요",
+    subtitle: "걱정 없이 자유로운 외출! 다양한 상품들을 할인가로 만나보세요",
     desc: "피부 본연의 균형을 위한 미니멀 케어",
     ctaText: "이벤트 만나보기",
     ctaHref: "/products",
@@ -33,7 +33,7 @@ export const heroSlides = [
   },
   {
     id: "hs-3",
-    title: "다양한 멕세이프, 지갑들을, <br>지갑들을 만나보세요",
+    title: "다양한 멕세이프,<br>지갑들을 만나보세요",
     subtitle: "다양한 맥세이프 제품들로 나의 폰을 꾸며 보세요",
     desc: "묵진한 가죽 느낌의 케이스",
     ctaText: "이벤트 만나보기",

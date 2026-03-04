@@ -35,7 +35,7 @@ const Hero = () => {
                   className="tit"
                   dangerouslySetInnerHTML={{ __html: slide.title }}
                 />
-                <p className="txt">{slide.subtitle}</p>
+                <p dangerouslySetInnerHTML={{ __html: slide.subtitle }} />
                 <a href={slide.ctaHref} className="btn">
                   {slide.ctaText}
                 </a>
@@ -43,10 +43,6 @@ const Hero = () => {
             </div>
           </SwiperSlide>
         ))}
-        <div className="hero-nav">
-        <div className="swiper-pagination"></div>
-          
-      </div>
 
       </Swiper>
     </div>
