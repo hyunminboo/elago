@@ -18,7 +18,7 @@ export const categories = [
     img: {
       src: img("cate-2.png"),
 
-      alt: "선케어",
+      alt: "이어폰",
     },
   },
   {

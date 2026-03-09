@@ -21,13 +21,14 @@
 
         .info-tit {
             display: inline-flex;
+            width: 20rem;
             height: 4rem;
             align-items: center;
             justify-content: center;
             padding: 0 2rem;
-            border: .1rem solid var(--secondary);
-            border-radius: 4rem;
-            color: var(--secondary);
+            border: .1rem solid var(--primary);
+            border-radius: 1rem;
+            color: var(--primary);
             font-size: 1.3rem;
 
             @media screen and (max-width:1280px) {
@@ -74,6 +75,22 @@
             }
         }
 
+        .pname {
+            margin-top: 3rem;
+            color: var(--text);
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+
+
+        .price {
+            margin-top: 2rem;
+            color: var(--text);
+            font-size: 2rem;
+            font-weight: 500;
+            
+        }
+
 
         .swiper-pagination {
             position: static;
@@ -88,7 +105,7 @@
             }
 
             .swiper-pagination-progressbar-fill {
-                background-color: var(--secondary);
+                background-color: var(--primary);
             }
         }
     }
@@ -99,21 +116,32 @@
         top: calc(50% + 5.3rem);
         z-index: 5;
         width: 3.5rem;
-        height: 6.7rem;
+        height: 17rem;
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
         font-size: 0;
+        background-color: var(--primary);
+
+        -webkit-mask-position: center;
+        mask-position: center;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-size: contain;
+        mask-size: contain;
     }
 
     .prev {
         left: -4.5rem;
-        background-image: url(/img/review_arrow_prev.svg);
+        -webkit-mask-image: url(/img/review_arrow_prev.svg);
+        mask-image: url(/img/review_arrow_prev.svg);
+        
     }
 
     .next {
-        background-image: url(/img/review_arrow_next.svg);
-        right: -4.5rem
+        right: -4.5rem;
+        -webkit-mask-image: url(/img/review_arrow_next.svg);
+        mask-image: url(/img/review_arrow_next.svg);
     }
 
 }
