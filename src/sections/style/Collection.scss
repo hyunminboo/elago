@@ -1,6 +1,7 @@
 .collection-inner {
     text-align: center;
 
+
     h2.tit {
         color: var(--primary);
     }
@@ -95,13 +96,13 @@
         .swiper-pagination {
             position: static;
             margin: 4.8rem auto 0;
-            width: 95%;
+            width: 100%;
             background-color: var(--bg);
             height: .2rem;
 
             @media screen and (max-width:1280px) {
                 margin: 2rem auto 0;
-                width: 80%;
+                width: 95%;
             }
 
             .swiper-pagination-progressbar-fill {
