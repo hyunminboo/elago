@@ -3,14 +3,14 @@ const img = (path) => `/img/${path}`;
 import { FaInstagramSquare, FaYoutube } from "react-icons/fa";
 import { RiKakaoTalkFill } from "react-icons/ri";
 
-// 로고
+
 export const logoData = {
   src: img("logo.svg"),
   alt: "ELAGO 로고",
   href: "/",
 };
 
-// 회사 정보
+
 export const companyData = [
   "(주)엘라고 컴퍼니 : 이찬우",
   "주소 : 경기도 고양시 일산동구 일산로138,224호",
@@ -29,7 +29,7 @@ export const footerLegal = {
     { label: "이용안내", href: "/guide" }
   ]
 };
-// 고객센터
+
 export const customerCenterData = {
   title: "CS Center",
   tel: { value: "031-901-4535", href: "tel:0319014535" },
@@ -38,7 +38,7 @@ export const customerCenterData = {
   talk: { label: "1:1 TALK", href: "#" },
 };
 
-// 메뉴
+
 export const footerMenus = [
   {
     title: "Brand",

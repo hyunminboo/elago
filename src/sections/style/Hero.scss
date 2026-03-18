@@ -1,6 +1,11 @@
 .hero-container {
   height: 90rem;
   position: relative;
+  transition: height 0.4s ease;
+
+  @media screen and (max-width: 1111px) {
+    height: 60rem; 
+  }
 
   .swiper {
     height: 100%;
@@ -19,40 +24,82 @@
 
       .t-wrap {
         margin-left: 5rem;
+        transition: margin 0.4s ease;
+
+        @media screen and (max-width: 1111px) {
+          margin-left: 3rem; 
+        }
 
         h2.tit {
           font-size: 7.3rem;
+          transition: font-size 0.4s ease;
+
+          @media screen and (max-width: 1111px) {
+            font-size: 4.5rem; 
+          }
+
+          @media screen and (max-width: 768px) {
+            font-size: 4rem; 
+          }
         }
 
         p {
           font-size: 2.1rem;
           margin-top: 4rem;
-        }
-      }
-    }
+          transition: all 0.4s ease;
 
-    @mixin theme($color, $btn-hover: null) {
-      h2.tit, p {
-        color: $color;
-      }
-      a.btn {
-        background: $color;
-        &:hover {
-          color: $btn-hover;
+          @media screen and (max-width: 1111px) {
+            font-size: 1.6rem; 
+            margin-top: 2rem;
+          }
+
+          @media screen and (max-width: 1111px) {
+            font-size: 1rem; 
+            margin-top: 2rem;
+          }
         }
       }
     }
 
     &.hs-1 {
-      @include theme(var(--primary));
+      h2 {
+        color: var(--primary);
+      } 
+      p {
+        color: var(--primary);
+      }
+      a.btn {
+        background-color: var(--primary);
+        color: var(--bg2);
+      }
     }
 
     &.hs-2 {
-      @include theme(var(--bg3), var(--bg2));
+      h2 {
+        color: var(--bg2);
+      } 
+      p {
+        color: var(--bg2);
+      }
+      a.btn {
+        background-color: var(--bg2);
+        color: var(--primary);
+      
+      }
+      
     }
 
     &.hs-3 {
-      @include theme(var(--primary), var(--main-slider03-tit));
+      h2 {
+        color: var(--muted);
+      } 
+      p {
+        color: var(--muted);
+      }
+      a.btn {
+        background-color: var(--bg2);
+        color: var(--muted);
+      }
     }
   }
 
@@ -64,41 +111,11 @@
     display: flex;
     align-items: center;
     gap: 2rem;
+    transition: bottom 0.4s ease;
 
-    .swiper-pagination-fraction {
-      width: 5rem;
-      height: 5rem;
-      position: relative;
-      font-size: 0;
-      color: var(--bg);
-
-      .swiper-pagination-current,
-      .swiper-pagination-total {
-        font-size: 2.2rem;
-        position: absolute;
-      }
-
-      .swiper-pagination-current {
-        left: 0;
-        top: 0;
-      }
-
-      .swiper-pagination-total {
-        right: 0;
-        bottom: 0;
-      }
-
-      &::after {
-        content: "";
-        display: block;
-        position: absolute;
-        width: 1px;
-        height: 50px;
-        background-color: var(--bg);
-        left: 10%;
-        top: 40%;
-        transform: rotate(45deg) translate(-50%, -50%);
-      }
+    @media screen and (max-width: 1111px) {
+      bottom: 4rem;
     }
+
   }
 }

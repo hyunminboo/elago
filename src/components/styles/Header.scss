@@ -3,28 +3,68 @@ header {
     top: 4rem;
     width: 100%;
     z-index: 5;
-    height: 10.5rem;
+    height: clamp(6.3rem, 8vw, 10.5rem);
     transition: all .3s;
-    margin: auto;
 
     .inner {
         max-width: 160rem;
+        margin: 0 auto;
+        padding: 0 2rem;
+        height: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: auto;
+
+        @media screen and (max-width: 1111px) {
+            max-width: 160rem;
+            padding: 0 3vw;
+        }
 
         .mob-nav-btn {
+            display: none;
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+
             @media screen and (max-width: 1111px) {
-            display: block;
+                display: block;
+            }
+
+            .hamburger-icon {
+                width: 2.4rem;
+                height: 1.8rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                span {
+                    display: block;
+                    width: 100%;
+                    height: .2rem;
+                    background-color: var(--primary);
+                    border-radius: .2rem;
+                    transition: all 0.3s ease;
+                }
+            }
+
+            &.active .hamburger-icon {
+                span:nth-child(1) {
+                    transform: translateY(.8rem) rotate(45deg);
+                }
+                span:nth-child(2) {
+                    opacity: 0;
+                }
+                span:nth-child(3) {
+                    transform: translateY(-.8rem) rotate(-45deg);
+                }
+            }
         }
 
-        }
-        
         .nav-list {
             display: flex;
             gap: 2rem;
-            
+
             a {
                 display: block;
                 font-size: 1.8rem;
@@ -32,7 +72,7 @@ header {
                 color: var(--primary);
                 padding: 0 .5rem;
                 position: relative;
-                
+
                 &::after {
                     display: block;
                     position: absolute;
@@ -43,7 +83,7 @@ header {
                     left: 0;
                     transition: width .3s ease;
                 }
-                
+
                 &:hover::after {
                     width: 100%;
                 }
@@ -59,18 +99,43 @@ header {
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
+
+            @media screen and (max-width: 1111px) {
+                width: 12.4rem;
+            }
         }
 
         .util-list {
             display: flex;
-            gap: 2.5rem;
-            li {
-                @media screen and (max-width:1111px){
+            gap: 1.2rem;
 
-                    &:not(:last-child){
+            li {
+                @media screen and (max-width: 1111px) {
+                    a {
+                        display: block;
+                        width: 2.5rem;
+                        position: relative;
+                        transform: translateX(-1rem);
+                        
+                        &::after {
+                            display: block;
+                            content: "0";
+                            width: 2rem;
+                            height: 2rem;
+                            background-color: var(--primary);
+                            text-align: center;
+                            align-content: center;
+                            border-radius: 50%;
+                            color: var(--bg);
+                            position: absolute;
+                            right: -2rem;
+                            top: 0;
+                        }
+                    }
+
+                    &:not(:last-child) {
                         display: none;
                     }
-                    
                 }
             }
         }

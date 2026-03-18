@@ -48,7 +48,7 @@ export const headerData ={
         { id: "language", label: "언어선택", icon: img("icon_language.svg"), href: "#" },
     ],
 
-    // 상단 공지/배너 TopBanner용
+
     topBanner: {
         enabled: true,
         height: 64,                  
