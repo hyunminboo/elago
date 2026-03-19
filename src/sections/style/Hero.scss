@@ -23,11 +23,11 @@
       max-width: 164rem;
 
       .t-wrap {
-        margin-left: 5rem;
+        margin-left: 10rem;
         transition: margin 0.4s ease;
 
         @media screen and (max-width: 1111px) {
-          margin-left: 3rem; 
+          margin-left: 5rem; 
         }
 
         h2.tit {

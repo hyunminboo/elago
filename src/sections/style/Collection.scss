@@ -174,7 +174,6 @@
   .prev,
   .next {
     position: absolute;
-    top: 45rem; 
     z-index: 10;
     width: 3.5rem;
     height: 6.7rem;
@@ -189,7 +188,13 @@
     transform: translateY(-50%);
     transition: all 0.3s ease;
 
+     @media screen and (max-width: 1920px) {
+      top: 58rem;
+     
+    }
+
     @media screen and (max-width: 1111px) {
+      top:48rem;
       width: 2.5rem;
       height: 4.8rem;
     }
