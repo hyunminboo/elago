@@ -17,14 +17,24 @@
         }
 
         .img-wrap {
-            width: 10rem;
-            height: 10rem;
+            width: 15rem;
+            height: 15rem;
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center;
             border-radius: 50%;
             background-color: var(--bg2);
             margin: 0 auto;
+
+            @media screen and (max-width: 1111px) {
+               width: 13rem;
+               height: 13rem;
+            }
+
+            @media screen and (max-width: 768px) {
+               width: 10rem;
+               height: 10rem;
+            }
         }
 
         p {
