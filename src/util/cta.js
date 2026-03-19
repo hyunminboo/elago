@@ -7,7 +7,7 @@ export const categories = [
     href: "/category/make-up/61/",
     img: {
       src: img("cate-1.png"),
-      alt: "메이크업",
+      alt: "맥세이프",
     },
   },
   {
@@ -18,7 +18,7 @@ export const categories = [
     img: {
       src: img("cate-2.png"),
 
-      alt: "선케어",
+      alt: "이어폰",
     },
   },
   {
@@ -36,7 +36,7 @@ export const categories = [
     id: 50,
     slug: "스트랩",
     name: "스트랩",
-    href: "/category/skincare/50/",
+    href: "/category/str/50/",
     img: {
       src: img("cate-4.png"),
 

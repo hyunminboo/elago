@@ -2,10 +2,10 @@ const img = (path) => `/img/${path}`;
 export const helloData = {
 
   media: {
-    type: "image",                     // "image" | "video"
-    src: img("2.png"),   // public 폴더 기준
+    type: "image",                    
+    src: img("2.png"),   
     alt: "img",
-    radius: 24                         // 이미지 둥근 모서리(px)
+    radius: 24                       
   },
 
   eyebrow: "We are elago!",

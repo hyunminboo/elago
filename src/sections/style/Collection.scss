@@ -1,0 +1,226 @@
+.collection-inner {
+  text-align: center;
+  position: relative;
+
+  h2.tit {
+    color: var(--primary);
+  }
+
+  p.txt {
+    margin-top: 1.7rem;
+    font-size: 1.9rem;
+    color: var(--primary);
+  }
+
+  .collection-slider {
+    margin: 6.8rem auto 0;
+    position: relative;
+
+    @media screen and (max-width: 1280px) {
+      padding: 0 6rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      padding: 0 5vw;
+    }
+
+    .info-tit {
+      display: inline-flex;
+      height: 4rem;
+      align-items: center;
+      justify-content: center;
+      padding: 0 2rem;
+      border: 0.1rem solid var(--tertiary);
+      border-radius: 1rem;
+      color: var(--tertiary);
+      font-size: 1.3rem;
+
+      @media screen and (max-width: 1280px) {
+        height: 3rem;
+        font-size: 1.1rem;
+      }
+    }
+
+    .name {
+      margin: 2rem 0 1.3rem;
+      font-size: 2rem;
+      color: var(--text);
+      font-family: "Archivo", serif;
+
+      @media screen and (max-width: 1280px) {
+        margin: 1rem 0 0;
+        font-size: 1.8rem;
+      }
+    }
+
+    .k-name {
+      color: var(--text);
+      font-size: 1.5rem;
+      font-weight: 500;
+
+      @media screen and (max-width: 1280px) {
+        font-size: 1.3rem;
+      }
+    }
+
+    .img-wrap {
+      width: 36rem;
+      height: 36rem;
+      max-width: 100%;
+      overflow: hidden;
+      margin: 2.5rem auto 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 1rem;
+      transition: border 0.3s ease;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 1rem;
+      }
+
+      @media screen and (max-width: 1280px) {
+        width: clamp(25rem, 40vw, 32rem);
+        height: clamp(25rem, 40vw, 32rem);
+      }
+
+      @media screen and (max-width: 768px) {
+        width: 70vw;
+        height: 70vw;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .swiper-slide-active .img-wrap {
+        box-sizing: border-box;
+      }
+    }
+
+    .pname {
+      margin-top: 3rem;
+      color: var(--text);
+      font-size: 1.5rem;
+      font-weight: 400;
+
+      @media screen and (max-width: 1280px) {
+        margin-top: 2rem;
+        font-size: 1.3rem;
+      }
+    }
+
+    .price {
+      margin-top: 2rem;
+      color: var(--text);
+      font-size: 2rem;
+      font-weight: 500;
+
+      @media screen and (max-width: 1280px) {
+        margin-top: 1rem;
+        font-size: 1.7rem;
+      }
+    }
+
+    .swiper-pagination {
+      position: static;
+      margin: 4.8rem auto 0;
+      width: 95%;
+      background-color: var(--bg);
+      height: 0.2rem;
+
+      @media screen and (max-width: 1280px) {
+        margin: 3rem auto 0;
+        width: 90%;
+      }
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        background-color: transparent;
+        height: auto;
+        margin-top: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .swiper-pagination-bullet {
+          width: 0.6rem;
+          height: 0.6rem;
+          background: transparent;
+          border: 1px solid var(--primary);
+          opacity: 1;
+          margin: 0 0.4rem;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background 0.3s ease;
+
+          &.swiper-pagination-bullet-active {
+            background: var(--primary); 
+          }
+        }
+      }
+
+      .swiper-pagination-progressbar-fill {
+        background-color: var(--primary);
+        
+        @media screen and (max-width: 768px) {
+          display: none; 
+        }
+      }
+    }
+  }
+
+  .prev,
+  .next {
+    position: absolute;
+    z-index: 10;
+    width: 3.5rem;
+    height: 6.7rem;
+    font-size: 0;
+    background-color: var(--primary);
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+
+     @media screen and (max-width: 1920px) {
+      top: 58rem;
+     
+    }
+
+    @media screen and (max-width: 1111px) {
+      top:48rem;
+      width: 2.5rem;
+      height: 4.8rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      display: none !important;
+    }
+  }
+
+  .prev {
+    left: -5rem;
+    -webkit-mask-image: url(/img/review_arrow_prev.svg);
+    mask-image: url(/img/review_arrow_prev.svg);
+
+    @media screen and (max-width: 1280px) {
+      left: 1rem;
+    }
+  }
+
+  .next {
+    right: -5rem;
+    -webkit-mask-image: url(/img/review_arrow_next.svg);
+    mask-image: url(/img/review_arrow_next.svg);
+
+    @media screen and (max-width: 1280px) {
+      right: 1rem;
+    }
+  }
+}

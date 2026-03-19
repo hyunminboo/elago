@@ -8,6 +8,8 @@ import 'swiper/css/navigation';
 import './style/Hero.scss'; 
 
 const Hero = () => {
+ 
+
   return (
     <div className="hero-container">
       <Swiper
