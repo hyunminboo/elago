@@ -5,17 +5,13 @@ footer {
     @media screen and (max-width: 1111px) {
         padding: 5rem 0 3rem;
     }
-
     .footer-inner {
         display: flex;
         justify-content: space-between;
         max-width: 172rem;
-        
-        
         margin: 0 auto;
         padding: 0 2rem;
         box-sizing: border-box; 
-        
         gap: 5rem;
 
         @media screen and (max-width: 1111px) {
