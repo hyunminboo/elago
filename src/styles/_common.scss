@@ -1,195 +1,199 @@
 .section {
-    padding: 15rem 0;
-    position: relative;
-    z-index: 0;
-    margin: auto;
+  padding: 15rem 0;
+  position: relative;
+  z-index: 0;
+  margin: auto;
+
+  @media screen and (max-width: 1111px) {
+    padding: 12vw 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 7rem 0;
+  }
+
+  &#hero {
+    padding: 0;
+    margin-top: 4rem;
+    transition: margin-top 0.3s;
 
     @media screen and (max-width: 1111px) {
-        padding: 12vw 0;
+      margin-top: 3vw;
     }
 
     @media screen and (max-width: 768px) {
-        padding: 7rem 0;
+      margin-top: 2rem;
+    }
+  }
+
+  &#collection {
+    background-color: var(--bg3);
+  }
+
+  &#skincare {
+    &::after {
+      display: block;
+      content: " ";
+      position: absolute;
+      width: 100%;
+      height: 0rem;
+      left: 0rem;
+      bottom: 0rem;
+      background-color: var(--bg2);
+    }
+  }
+
+  h2.tit {
+    font-size: 7.3rem;
+    font-weight: 200;
+
+    @media screen and (max-width: 1111px) {
+      font-size: 4.5rem;
     }
 
-    &#hero {
-        padding: 0;
-        margin-top: 4rem;
-        transition: margin-top .3s;
+    @media screen and (max-width: 768px) {
+      font-size: 4rem;
+    }
+  }
 
-        @media screen and (max-width: 1111px) {
-            margin-top: 3vw;
-        }
+  p.txt {
+    font-size: 1.6rem;
 
-        @media screen and (max-width: 768px) {
-            margin-top: 2rem;
-        }
+    @media screen and (max-width: 1111px) {
+      font-size: 1.5rem;
     }
 
-    &#collection {
-        background-color: var(--bg3);
+    @media screen and (max-width: 768px) {
+      font-size: 1.4rem;
+    }
+  }
+
+  a.btn {
+    display: inline-block;
+    margin-top: 3rem;
+    font-size: 1.6rem;
+    text-align: center;
+    width: 27rem;
+    height: 5rem;
+    align-content: center;
+    color: var(--bg);
+    background-color: var(--primary);
+    border-radius: 1rem;
+    position: relative;
+    border: 0.1rem solid transparent;
+    transition: all 0.8s;
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer;
+    text-transform: uppercase;
+
+    @media screen and (max-width: 1111px) {
+      width: clamp(18rem, 24vw, 27rem);
+      height: clamp(4rem, 4.5vw, 5rem);
+      font-size: clamp(1.3rem, 1.4vw, 1.6rem);
+      margin-top: clamp(2rem, 2.5vw, 3rem);
+      border-radius: 1vw;
     }
 
-    &#skincare {
-        &::after {
-            display: block;
-            content: " ";
-            position: absolute;
-            width: 100%;
-            height: 0rem;
-            left: 0rem;
-            bottom: 0rem;
-            background-color: var(--bg2);
-        }
-    }
-      
-    h2.tit {
-        font-size: 7.3rem;
-        font-weight: 200;
-
-        @media screen and (max-width: 1111px) {
-            font-size: 4.5rem;
-        }
-
-        @media screen and (max-width: 768px) {
-            font-size: 4rem;
-        }
+    @media screen and (max-width: 768px) {
+      width: 16rem;
+      height: 4rem;
+      font-size: 1.2rem;
+      margin-top: 2rem;
+      border-radius: 0.8rem;
     }
 
-    p.txt {
-        font-size: 1.6rem;
-
-        @media screen and (max-width: 1111px) {
-            font-size: 1.5vw;
-        }
-
-        @media screen and (max-width: 768px) {
-            font-size: 1.4rem;
-        }
+    &::after {
+      content: "";
+      border-radius: 1rem;
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      background-color: var(--primary);
+      left: 0;
+      top: 0;
+      z-index: 0;
+      transition: all 0.5s;
     }
 
-    a.btn {
-        display: inline-block;
-        margin-top: 3rem;
-        font-size: 1.6rem;
-        text-align: center;
-        width: 27rem;
-        height: 5rem;
-        align-content: center;
-        color: var(--bg);
-        background-color: var(--primary);
-        border-radius: 1rem;
-        position: relative;
-        border: .1rem solid transparent;
-        transition: all .8s;
-        overflow: hidden;
-        z-index: 1;
-        cursor: pointer;
-        text-transform: uppercase;
+    &:hover {
+      color: var(--primary);
 
-        @media screen and (max-width: 1111px) {
-            width: 24vw;
-            height: 4.5vw;
-            font-size: 1.4vw;
-            margin-top: 2.5vw;
-            border-radius: 1vw;
-        }
+      &::after {
+        opacity: 1;
+        background-color: var(--bg);
+        z-index: -1;
+      }
+    }
+  }
 
-        @media screen and (max-width: 768px) {
-            width: 16rem;
-            height: 4rem;
-            font-size: 1.2rem;
-            margin-top: 2rem;
-            border-radius: 0.8rem;
-        }
+  p.txt-2 {
+    font-size: 1.9rem;
+    color: var(--secondary);
+    font-family: "Source Serif 4", serif;
 
-        &::after {
-            content: "";
-            border-radius: 1rem;
-            display: block;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            background-color: var(--primary);
-            left: 0;
-            top: 0;
-            z-index: 0;
-            transition: all .5s;
-        }
-
-        &:hover {
-            color: var(--primary);
-
-            &::after {
-                opacity: 1;
-                background-color: var(--bg);
-                z-index: -1;
-            }
-        }
+    @media screen and (max-width: 1111px) {
+      font-size: 1.8rem;
     }
 
-    p.txt-2 {
-        font-size: 1.9rem;
-        color: var(--secondary);
-        font-family: 'Source Serif 4', serif;
+    @media screen and (max-width: 768px) {
+      font-size: 1.6rem;
+    }
+  }
 
-        @media screen and (max-width: 1111px) {
-            font-size: 1.8vw;
-        }
+  p.txt-1 {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    color: #202020;
 
-        @media screen and (max-width: 768px) {
-            font-size: 1.6rem;
-        }
+    @media screen and (max-width: 1111px) {
+      font-size: 1.5rem;
+      line-height: 2.4rem;
     }
 
-    p.txt-1 {
-        font-size: 1.6rem;
-        line-height: 2.6rem;
-        color: #202020;
-
-        @media screen and (max-width: 1111px) {
-            font-size: 1.5vw;
-            line-height: 2.4vw;
-        }
-
-        @media screen and (max-width: 768px) {
-            font-size: 1.4rem;
-            line-height: 2.2rem;
-        }
+    @media screen and (max-width: 768px) {
+      font-size: 1.4rem;
+      line-height: 2.2rem;
     }
+  }
 }
 
 .section,
 header,
 footer {
-    .inner {
-        max-width: var(--maxw);
-        margin: auto;
-        position: relative;
-        height: 100%;
-    }
+  .inner {
+    max-width: var(--maxw);
+    margin: auto;
+    position: relative;
+    height: 100%;
+  }
 }
 
 .app-container {
-    &.up {
-        .TopBanner {
-            top: -110%;
-        }
-
-        header {
-            top: 0;
-        }
-
-        #hero {
-            margin-top: 0;
-        }
+  &.up {
+    .TopBanner {
+      top: -110%;
     }
 
-    &.scrolled {
-        header {
-            background: #ffffff;
-            background: linear-gradient(180deg, rgba(255, 255, 255, 1) 24%, rgba(255, 255, 255, 0) 100%);
-        }
+    header {
+      top: 0;
     }
+
+    #hero {
+      margin-top: 0;
+    }
+  }
+
+  &.scrolled {
+    header {
+      background: #ffffff;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 1) 24%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+  }
 }

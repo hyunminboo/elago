@@ -4,7 +4,11 @@
   transition: height 0.4s ease;
 
   @media screen and (max-width: 1111px) {
-    height: 60rem; 
+    height: 60rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    height: 45rem;
   }
 
   .swiper {
@@ -27,7 +31,11 @@
         transition: margin 0.4s ease;
 
         @media screen and (max-width: 1111px) {
-          margin-left: 5rem; 
+          margin-left: 5rem;
+        }
+
+        @media screen and (max-width: 768px) {
+          margin-left: 2.5rem;
         }
 
         h2.tit {
@@ -35,11 +43,11 @@
           transition: font-size 0.4s ease;
 
           @media screen and (max-width: 1111px) {
-            font-size: 4.5rem; 
+            font-size: 4.5rem;
           }
 
           @media screen and (max-width: 768px) {
-            font-size: 4rem; 
+            font-size: 4rem;
           }
         }
 
@@ -49,13 +57,13 @@
           transition: all 0.4s ease;
 
           @media screen and (max-width: 1111px) {
-            font-size: 1.6rem; 
+            font-size: 1.6rem;
             margin-top: 2rem;
           }
 
-          @media screen and (max-width: 1111px) {
-            font-size: 1rem; 
-            margin-top: 2rem;
+          @media screen and (max-width: 768px) {
+            font-size: 1.4rem;
+            margin-top: 1.5rem;
           }
         }
       }
@@ -64,7 +72,7 @@
     &.hs-1 {
       h2 {
         color: var(--primary);
-      } 
+      }
       p {
         color: var(--primary);
       }
@@ -77,22 +85,20 @@
     &.hs-2 {
       h2 {
         color: var(--bg2);
-      } 
+      }
       p {
         color: var(--bg2);
       }
       a.btn {
         background-color: var(--bg2);
         color: var(--primary);
-      
       }
-      
     }
 
     &.hs-3 {
       h2 {
         color: var(--muted);
-      } 
+      }
       p {
         color: var(--muted);
       }
@@ -116,6 +122,5 @@
     @media screen and (max-width: 1111px) {
       bottom: 4rem;
     }
-
   }
 }

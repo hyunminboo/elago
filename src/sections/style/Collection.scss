@@ -156,16 +156,16 @@
           transition: background 0.3s ease;
 
           &.swiper-pagination-bullet-active {
-            background: var(--primary); 
+            background: var(--primary);
           }
         }
       }
 
       .swiper-pagination-progressbar-fill {
         background-color: var(--primary);
-        
+
         @media screen and (max-width: 768px) {
-          display: none; 
+          display: none;
         }
       }
     }
@@ -185,16 +185,12 @@
     mask-repeat: no-repeat;
     -webkit-mask-size: contain;
     mask-size: contain;
+    top: 58rem;
     transform: translateY(-50%);
     transition: all 0.3s ease;
 
-     @media screen and (max-width: 1920px) {
-      top: 58rem;
-     
-    }
-
     @media screen and (max-width: 1111px) {
-      top:48rem;
+      top: 48rem;
       width: 2.5rem;
       height: 4.8rem;
     }
