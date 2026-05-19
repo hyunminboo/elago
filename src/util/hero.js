@@ -46,19 +46,5 @@ export const heroSlides = [
     active: true,
     order: 3,
   },
-  {
-    id: "hs-4",
-    title: "Banner",
-    subtitle: "Vegan & Cruelty-Free",
-    desc: "다양한 상품들",
-    ctaText: "혜택보러가기",
-    ctaHref: "/about",
-    image: {
-      desktop:  img("main_d_4.png"),
-      mobile: img("main_mo_4.jpg"),
-    },
-    alt: "브랜드 배너",
-    active: true,
-    order: 4,
-  },
+  
 ];
